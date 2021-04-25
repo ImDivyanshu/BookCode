@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="form" id="myForm">
+        <label for="inp_username">
+            Username
+        </label>
+        <input type="text" name="inp_username" id="inp_username" />
+        <label for="inp_lastname">
+            Last Name
+        </label>
+        <input type="text" name="inp_lastname" id="inp_lastname"/>
+        <label for="inp_addresss">
+            address
+        </label>
+        <input type="text" name="inp_address" id="inp_address"/>
+        <label for="inp_city">
+            City
+        </label>
+        <input type="text" name="inp_city" id="inp_city"/>
+        <button type="submit">Login</button>
+    </form>
+    <script>
+        const myForm = document.getElementById('myForm');
+        myForm.addEventListener('submit',function (e)
+        {
+            e.preventDefault();
+            const formData = new FormData(this);
+            fetch('https://localhost:44363/api/student',{
+                method: 'post',
+                body: formData
+            }).then(function (response) {
+                return response.text();
+            }).then(function (text){
+                console.log(text)
+            }).catch(function (error){
+                console.log(error);
+            })
+        })
+    </script>
+</body>
+</html>

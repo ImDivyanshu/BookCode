@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>HTML</title>
+</head>
+<body>
+    <div>
+        <form class="form" id="myForm">
+            <label for="inp_username">
+                Username
+            </label>
+            <input type="text" name="inp_username" id="inp_username" />
+            <label for="inp_lastname">
+                Last Name
+            </label>
+            <input type="text" name="inp_lastname" id="inp_lastname"/>
+            <label for="inp_addresss">
+                address
+            </label>
+            <input type="text" name="inp_address" id="inp_address"/>
+            <label for="inp_city">
+                City
+            </label>
+            <input type="text" name="inp_city" id="inp_city"/>
+            <button type="submit" onclick="PostData()">Login</button>
+        </form>
+
+
+        <h3>Fetching Users</h3>
+        <button onclick="">Fetch User</button>
+        <table id="users"></table>
+
+
+
+    </div>
+    <script src="script.js"></script>
+   </body>
+</html>
